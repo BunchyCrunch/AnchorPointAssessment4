@@ -14,7 +14,7 @@ static NSString * const kBaseURLString = @"https://api.themoviedb.org";
 static NSString * const kVersionComponentString = @"3";
 static NSString * const kSearchComponentString = @"search";
 static NSString * const kMovieComponentString = @"movie";
-static NSString * const kApiKeyKey = @"key";
+static NSString * const kApiKeyKey = @"api_key";
 static NSString * const kApiKeyValue = @"626d672a0da2861da16a3f9f5cf499ff";
 
 static NSString * const kImageBaseURLString = @"https://image.tmdb.org/t/p/w500";
@@ -65,10 +65,11 @@ static NSString * const kImageBaseURLString = @"https://image.tmdb.org/t/p/w500"
             }
             
             NSMutableArray *movieArray = [NSMutableArray new];
-            for (NSDictionary * currentDictionary in topLevelDict)
+            
+            NSArray *resultsArray = topLevelDict[@"results"];
+            for (NSDictionary * secondDictionary in resultsArray)
             {
-                NSDictionary *resultsDictionary = currentDictionary[@"results"];
-                JSMovie *movie = [[JSMovie alloc] initWithDictionary:resultsDictionary];
+                JSMovie *movie = [[JSMovie alloc] initWithDictionary:secondDictionary];
                 [movieArray addObject:movie];
             }
             completion(movieArray);
@@ -76,33 +77,33 @@ static NSString * const kImageBaseURLString = @"https://image.tmdb.org/t/p/w500"
     }] resume];
 } // end of fetchMovie
 
-- (void)fetchImage:(JSMovie *)image completion:(void (^)(UIImage * _Nullable))completion
-{
-    NSURL * imageURL = [NSURL URLWithString:kImageBaseURLString];
-    NSURL * finalURL = [imageURL URLByAppendingPathComponent:image.poster_path];
-    
-    [[[NSURLSession sharedSession] dataTaskWithURL:finalURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        if (error)
-        {
-            NSLog(@"Error fetching image: %@", error);
-            completion(nil);
-            return;
-        }
-        if (response)
-        {
-            NSLog(@"%@", response);
-        }
-        
-        if (!data)
-        {
-            NSLog(@"Error with image data");
-            completion(nil);
-            return;
-        }
-        UIImage *image = [UIImage imageWithData:data];
-        completion(image);
-    }]resume];
-}
-
+//- (void)fetchImage:(JSMovie *)image completion:(void (^)(UIImage * _Nullable))completion
+//{
+//    NSURL * imageURL = [NSURL URLWithString:kImageBaseURLString];
+//    NSURL * finalURL = [imageURL URLByAppendingPathComponent:image.poster_path];
+//
+//    [[[NSURLSession sharedSession] dataTaskWithURL:finalURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//        if (error)
+//        {
+//            NSLog(@"Error fetching image: %@", error);
+//            completion(nil);
+//            return;
+//        }
+//        if (response)
+//        {
+//            NSLog(@"%@", response);
+//        }
+//
+//        if (!data)
+//        {
+//            NSLog(@"Error with image data");
+//            completion(nil);
+//            return;
+//        }
+//        UIImage *image = [UIImage imageWithData:data];
+//        completion(image);
+//    }]resume];
+//}
+//
 
 @end

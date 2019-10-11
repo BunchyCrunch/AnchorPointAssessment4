@@ -15,6 +15,8 @@
 		FC2EAD5B2350D208009C32EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2EAD5A2350D208009C32EC /* main.m */; };
 		FC2EAD642350D26E009C32EC /* JSMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2EAD632350D26E009C32EC /* JSMovie.m */; };
 		FC2EAD692350D671009C32EC /* JSMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2EAD682350D671009C32EC /* JSMovieController.m */; };
+		FC742C6A2350EEE600A89AE8 /* JSMovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC742C692350EEE600A89AE8 /* JSMovieTableViewController.swift */; };
+		FC742C6C2350F02B00A89AE8 /* JSMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC742C6B2350F02B00A89AE8 /* JSMovieTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,9 @@
 		FC2EAD632350D26E009C32EC /* JSMovie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSMovie.m; sourceTree = "<group>"; };
 		FC2EAD672350D670009C32EC /* JSMovieController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSMovieController.h; sourceTree = "<group>"; };
 		FC2EAD682350D671009C32EC /* JSMovieController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSMovieController.m; sourceTree = "<group>"; };
+		FC742C682350EEE600A89AE8 /* AnchorPoint4Assessment-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnchorPoint4Assessment-Bridging-Header.h"; sourceTree = "<group>"; };
+		FC742C692350EEE600A89AE8 /* JSMovieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSMovieTableViewController.swift; sourceTree = "<group>"; };
+		FC742C6B2350F02B00A89AE8 /* JSMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSMovieTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +71,8 @@
 			children = (
 				FC2EAD652350D279009C32EC /* Model */,
 				FC2EAD662350D285009C32EC /* Views */,
-				FC2EAD612350D239009C32EC /* Resources */,
 				FC2EAD6A2350D67F009C32EC /* Controllers */,
+				FC2EAD612350D239009C32EC /* Resources */,
 			);
 			path = AnchorPoint4Assessment;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				FC2EAD512350D205009C32EC /* Main.storyboard */,
+				FC742C6B2350F02B00A89AE8 /* JSMovieTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -109,6 +115,8 @@
 			children = (
 				FC2EAD672350D670009C32EC /* JSMovieController.h */,
 				FC2EAD682350D671009C32EC /* JSMovieController.m */,
+				FC742C692350EEE600A89AE8 /* JSMovieTableViewController.swift */,
+				FC742C682350EEE600A89AE8 /* AnchorPoint4Assessment-Bridging-Header.h */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -145,6 +153,7 @@
 				TargetAttributes = {
 					FC2EAD442350D205009C32EC = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -188,6 +197,8 @@
 				FC2EAD5B2350D208009C32EC /* main.m in Sources */,
 				FC2EAD642350D26E009C32EC /* JSMovie.m in Sources */,
 				FC2EAD692350D671009C32EC /* JSMovieController.m in Sources */,
+				FC742C6C2350F02B00A89AE8 /* JSMovieTableViewCell.swift in Sources */,
+				FC742C6A2350EEE600A89AE8 /* JSMovieTableViewController.swift in Sources */,
 				FC2EAD4D2350D205009C32EC /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +339,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LNY44KHWJJ;
 				INFOPLIST_FILE = "$(SRCROOT)/AnchorPoint4Assessment/Resources/Info.plist";
@@ -337,6 +349,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.AnchorPoint4Assessment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AnchorPoint4Assessment/Controllers/AnchorPoint4Assessment-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -345,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LNY44KHWJJ;
 				INFOPLIST_FILE = "$(SRCROOT)/AnchorPoint4Assessment/Resources/Info.plist";
@@ -354,6 +370,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.AnchorPoint4Assessment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AnchorPoint4Assessment/Controllers/AnchorPoint4Assessment-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
