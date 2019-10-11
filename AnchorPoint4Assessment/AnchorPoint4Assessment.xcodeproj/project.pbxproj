@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		FC2EAD4A2350D205009C32EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2EAD492350D205009C32EC /* AppDelegate.m */; };
 		FC2EAD4D2350D205009C32EC /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2EAD4C2350D205009C32EC /* SceneDelegate.m */; };
-		FC2EAD502350D205009C32EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2EAD4F2350D205009C32EC /* ViewController.m */; };
 		FC2EAD532350D205009C32EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2EAD512350D205009C32EC /* Main.storyboard */; };
 		FC2EAD552350D208009C32EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2EAD542350D208009C32EC /* Assets.xcassets */; };
 		FC2EAD582350D208009C32EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2EAD562350D208009C32EC /* LaunchScreen.storyboard */; };
 		FC2EAD5B2350D208009C32EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2EAD5A2350D208009C32EC /* main.m */; };
+		FC2EAD642350D26E009C32EC /* JSMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2EAD632350D26E009C32EC /* JSMovie.m */; };
+		FC2EAD692350D671009C32EC /* JSMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2EAD682350D671009C32EC /* JSMovieController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +23,15 @@
 		FC2EAD492350D205009C32EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FC2EAD4B2350D205009C32EC /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		FC2EAD4C2350D205009C32EC /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		FC2EAD4E2350D205009C32EC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FC2EAD4F2350D205009C32EC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FC2EAD522350D205009C32EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC2EAD542350D208009C32EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC2EAD572350D208009C32EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC2EAD592350D208009C32EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC2EAD5A2350D208009C32EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FC2EAD622350D26E009C32EC /* JSMovie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSMovie.h; sourceTree = "<group>"; };
+		FC2EAD632350D26E009C32EC /* JSMovie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSMovie.m; sourceTree = "<group>"; };
+		FC2EAD672350D670009C32EC /* JSMovieController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSMovieController.h; sourceTree = "<group>"; };
+		FC2EAD682350D671009C32EC /* JSMovieController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSMovieController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +64,53 @@
 		FC2EAD472350D205009C32EC /* AnchorPoint4Assessment */ = {
 			isa = PBXGroup;
 			children = (
+				FC2EAD652350D279009C32EC /* Model */,
+				FC2EAD662350D285009C32EC /* Views */,
+				FC2EAD612350D239009C32EC /* Resources */,
+				FC2EAD6A2350D67F009C32EC /* Controllers */,
+			);
+			path = AnchorPoint4Assessment;
+			sourceTree = "<group>";
+		};
+		FC2EAD612350D239009C32EC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				FC2EAD482350D205009C32EC /* AppDelegate.h */,
 				FC2EAD492350D205009C32EC /* AppDelegate.m */,
 				FC2EAD4B2350D205009C32EC /* SceneDelegate.h */,
 				FC2EAD4C2350D205009C32EC /* SceneDelegate.m */,
-				FC2EAD4E2350D205009C32EC /* ViewController.h */,
-				FC2EAD4F2350D205009C32EC /* ViewController.m */,
-				FC2EAD512350D205009C32EC /* Main.storyboard */,
 				FC2EAD542350D208009C32EC /* Assets.xcassets */,
 				FC2EAD562350D208009C32EC /* LaunchScreen.storyboard */,
 				FC2EAD592350D208009C32EC /* Info.plist */,
 				FC2EAD5A2350D208009C32EC /* main.m */,
 			);
-			path = AnchorPoint4Assessment;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FC2EAD652350D279009C32EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC2EAD622350D26E009C32EC /* JSMovie.h */,
+				FC2EAD632350D26E009C32EC /* JSMovie.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC2EAD662350D285009C32EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC2EAD512350D205009C32EC /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FC2EAD6A2350D67F009C32EC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC2EAD672350D670009C32EC /* JSMovieController.h */,
+				FC2EAD682350D671009C32EC /* JSMovieController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +139,7 @@
 		FC2EAD3D2350D205009C32EC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JS;
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Josh Sparks";
 				TargetAttributes = {
@@ -146,9 +184,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC2EAD502350D205009C32EC /* ViewController.m in Sources */,
 				FC2EAD4A2350D205009C32EC /* AppDelegate.m in Sources */,
 				FC2EAD5B2350D208009C32EC /* main.m in Sources */,
+				FC2EAD642350D26E009C32EC /* JSMovie.m in Sources */,
+				FC2EAD692350D671009C32EC /* JSMovieController.m in Sources */,
 				FC2EAD4D2350D205009C32EC /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LNY44KHWJJ;
-				INFOPLIST_FILE = AnchorPoint4Assessment/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AnchorPoint4Assessment/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +347,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LNY44KHWJJ;
-				INFOPLIST_FILE = AnchorPoint4Assessment/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AnchorPoint4Assessment/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
